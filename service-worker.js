@@ -1,6 +1,6 @@
 const CACHE_NAME = 'catlight-v1';
 const urlsToCache = [
-  '/index2.html',
+  '/index.html',
   '/styles.css',
   '/script.js',
   '/manifest.json',
