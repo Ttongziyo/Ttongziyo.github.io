@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小猫补光灯</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icon-192.png">
+</head>
+<body>
+    <div class="main-bg" id="mainBg">
+        <div class="top-bar">
+            <div class="ratio-group">
+                <button class="ratio-btn active" data-ratio="1:1">1:1</button>
+                <button class="ratio-btn" data-ratio="3:4">3:4</button>
+                <button class="ratio-btn" data-ratio="9:16">9:16</button>
+            </div>
+            <div class="camera-action-group">
+                <button class="icon-btn" id="switchCamera" title="切换摄像头">🔄</button>
+                <button class="icon-btn" id="takePhoto" title="拍照">📷</button>
+            </div>
+        </div>
+        <div class="camera-center">
+            <div class="camera-container">
+                <video id="camera" autoplay playsinline></video>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="desc">
+                <div class="desc-title" id="seasonTestBtn">火爆韩国的四季色彩测试</div>
+                <div class="desc-sub">测测最适合你的穿衣颜色、妆容发色！</div>
+            </div>
+            <div class="color-blocks">
+                <button class="color-block" style="background:#9928f2" data-bg="#9928f2"></button>
+                <button class="color-block" style="background:#9bf4fc" data-bg="#9bf4fc"></button>
+                <button class="color-block" style="background:#ffb3c0" data-bg="#ffb3c0"></button>
+                <button class="color-block" style="background:#ffffff" data-bg="#ffffff"></button>
+                <button class="color-block" style="background:#fbed46" data-bg="#fbed46"></button>
+                <button class="color-block" style="background:#4889fd" data-bg="#4889fd"></button>
+                <button class="color-block" style="background:#7f13ff" data-bg="#7f13ff"></button>
+                <button class="color-block" style="background:#fb5c24" data-bg="#fb5c24"></button>
+            </div>
+            <div class="color-slider-group">
+                <input type="range" id="hueSlider" min="0" max="360" value="0">
+            </div>
+            <div class="slider-row slider-row-full">
+                <span>饱和度</span>
+                <input type="range" id="saturationSlider" min="0" max="200" value="100">
+                <span id="saturationValue">100%</span>
+            </div>
+            <div class="slider-row slider-row-full">
+                <span>屏幕亮度</span>
+                <input type="range" id="brightnessSlider" min="50" max="200" value="100">
+                <span id="brightnessValue">100%</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('service-worker.js');
+      });
+    }
+    </script>
+</body>
+</html> 
