@@ -1,7 +1,7 @@
 {
   "name": "小猫补光灯",
   "short_name": "补光灯",
-  "start_url": "index2.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#a259e6",
   "theme_color": "#a259e6",
