@@ -82,13 +82,13 @@ body, html {
 }
 
 .camera-center {
-    width: 50vw;
+    width: 30vw;
     display: flex;
     justify-content: center;
     margin-top: 18px;
     margin-bottom: auto;
     aspect-ratio: 1/1;
-    min-width: 120px;
+    min-width: 50px;
     max-width: 400px;
     position: relative;
 }
@@ -393,8 +393,8 @@ body, html {
 
 @media (max-width: 600px) {
     .camera-center {
-        width: 90vw;
-        min-width: 100px;
+        width: 30vw;
+        min-width: 50px;
         max-width: 400px;
     }
     .camera-container {
